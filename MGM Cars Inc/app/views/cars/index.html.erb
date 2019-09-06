@@ -1,0 +1,37 @@
+
+
+
+<h1> <%= pluralize(@cars.size, 'Car') %> <%= 'is'.pluralize(@cars.size) %> in this list:</h1>
+
+<ul>
+  <% @cars.each do |car| %>
+    <article>
+      <header>
+        <h2><%= car.year, car.make, car.model%>
+      </header>
+    <p>
+    <%= truncate(car.description, length: 40, separator: ' ') %>
+    </p>
+    <table>
+      <tr>
+        <th> Color:</th>
+        <td> <%= car.color %><br></td>
+      </tr>
+      <tr>
+        <th>Mileage:</th>
+        <td><%= car.mileage %></td>
+        </tr>
+      <tr>
+        <th> Vehicle type: </th>
+        <td><%= car.type %></td>
+      </tr>
+      <tr>
+        <th>Price: </th>
+        <td><%= car.price %></td>
+      </tr>
+    </table>
+  </article>
+  
+  <% end %>
+  
+</ul>
