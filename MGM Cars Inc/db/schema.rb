@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 20190906001525) do
 
   create_table "cars", force: :cascade do |t|
-    t.integer "car_year"
+    t.integer "year"
     t.text "make"
-    t.text "car_model"
-    t.text "car_color"
+    t.text "model"
+    t.text "color"
     t.integer "mileage"
     t.float "sale_price"
     t.text "type"

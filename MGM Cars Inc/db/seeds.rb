@@ -7265,5 +7265,7 @@
 [2013, 'Volvo', 'C30'],
 [2013, 'Volvo', 'C70'],
 [2013, 'Volvo', 'S60'],
-[2013, 'Volvo', 'XC90'];].each do |c|
+[2013, 'Volvo', 'XC90']].each do |c|
 
+ Car.create(year: c[0], make: c[1], model: c[2])
+end

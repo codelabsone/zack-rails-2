@@ -7,11 +7,9 @@
   <% @cars.each do |car| %>
     <article>
       <header>
-        <h2><%= car.year, car.make, car.model%>
+        <h2><%= car.year %><%= car.make %><%= car.model %>
       </header>
     <p>
-    <%= truncate(car.description, length: 40, separator: ' ') %>
-    </p>
     <table>
       <tr>
         <th> Color:</th>
@@ -27,7 +25,7 @@
       </tr>
       <tr>
         <th>Price: </th>
-        <td><%= car.price %></td>
+        <td><%= car.sale_price %></td>
       </tr>
     </table>
   </article>

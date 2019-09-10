@@ -3,5 +3,4 @@ class CarsController < ApplicationController
         @cars = Car.all
     end
 
-    
 end
