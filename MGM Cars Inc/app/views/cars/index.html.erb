@@ -7,7 +7,7 @@
   <% @cars.each do |car| %>
     <article>
       <header>
-        <h2><%= car.year, car.make, car.model%>
+        <h2><%= car.year %><%= car.make %><%= car.model %>
       </header>
     <p>
     <%= truncate(car.description, length: 40, separator: ' ') %>
