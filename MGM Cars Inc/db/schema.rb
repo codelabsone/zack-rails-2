@@ -13,13 +13,13 @@
 ActiveRecord::Schema.define(version: 20190906001525) do
 
   create_table "cars", force: :cascade do |t|
-    t.integer "year"
-    t.text "make"
-    t.text "model"
-    t.text "color"
-    t.integer "mileage"
-    t.float "sale_price"
-    t.text "type"
+    t.integer "year", default: "not specified", null: false
+    t.text "make", null: false
+    t.text "model", null: false
+    t.text "color", default: "not specified", null: false
+    t.integer "mileage", default: "not specified", null: false
+    t.float "price", default: "Please contact us for special pricing!", null: false
+    t.text "vehicle_type", default: "passenger vehicle", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

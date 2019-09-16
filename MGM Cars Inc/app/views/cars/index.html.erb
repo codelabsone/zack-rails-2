@@ -1,13 +1,13 @@
 
 
-
+<h4> Welcome to MGGM cars! </h4>
 <h1> <%= pluralize(@cars.size, 'Car') %> <%= 'is'.pluralize(@cars.size) %> in this list:</h1>
 
 <ul>
   <% @cars.each do |car| %>
     <article>
       <header>
-        <h2><%= car.year %><%= car.make %><%= car.model %>
+        <h2><%= car.year %> <%= car.make %> <%= car.model %>
       </header>
     <p>
     <table>
@@ -16,16 +16,16 @@
         <td> <%= car.color %><br></td>
       </tr>
       <tr>
-        <th>Mileage:</th>
+        <th>Mileage: </th>
         <td><%= car.mileage %></td>
         </tr>
       <tr>
-        <th> Vehicle type: </th>
-        <td><%= car.type %></td>
+        <th>Vehicle type: </th>
+        <td><%= car.vehicle_type %></td>
       </tr>
       <tr>
         <th>Price: </th>
-        <td><%= car.sale_price %></td>
+        <td><%= car.price %></td>
       </tr>
     </table>
   </article>
