@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MGGMCarsInc</title>
-    <%= csrf_meta_tags %>
 
+    <%= render "layouts/header" %>
 
-  </head>
+    <body>
+      <%= yield %>
+    </body>
 
-  <body>
-    <%= yield %>
-  </body>
+    <%= render "layouts/footer" %>
+
 </html>
