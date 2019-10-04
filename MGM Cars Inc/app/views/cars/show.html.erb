@@ -1,0 +1,36 @@
+<article id="car", class="car">
+      <header>
+        <h2><% @car=Car.find(params[:id]) %>
+          <%= "#{@car.year} #{@car.make} #{@car.model}"%>
+      </header>
+    <p>
+    <table>
+      <tr>
+        <th>Description: </th>
+        <td><%= @car.description %></td>
+        </tr>
+      <tr>
+       <tr>
+        <th>Color: </th>
+        <td> <%= @car.color %><br></td>
+      </tr>
+      <tr>
+        <th>Mileage: </th>
+        <td><%= @car.mileage %></td>
+        </tr>
+      <tr>
+        <th>Vehicle type: </th>
+        <td><%= @car.vehicle_type %></td>
+      </tr>
+      <tr>
+        <th>Price: </th>
+        <td><%= number_to_currency(@car.price) %></td>
+      </tr>
+    </table>
+  </article>
+
+  
+<nav>
+  <%= link_to "All Cars", cars_path %> |
+  <%= link_to "Edit", edit_car_path(@car) %>
+</nav>

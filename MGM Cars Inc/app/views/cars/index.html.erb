@@ -1,13 +1,13 @@
 
 
-<h4> Welcome to MGGM cars! </h4>
-<h1> <%= pluralize(@cars.size, 'Car') %> <%= 'is'.pluralize(@cars.size) %> in this list:</h1>
+<h1> Welcome to MGGM cars! </h1>
+<h2> <%= pluralize(@cars.size, 'Car') %> <%= 'is'.pluralize(@cars.size) %> in this list:</h2>
 
 <ul>
   <% @cars.each do |car| %>
     <article>
       <header>
-        <h2><%= car.year %> <%= car.make %> <%= car.model %>
+        <h3><%= link_to "#{car.year} #{car.make} #{car.model}", car %>      
       </header>
     <p>
     <table>
@@ -25,7 +25,7 @@
       </tr>
       <tr>
         <th>Price: </th>
-        <td><%= car.price %></td>
+        <td><%= number_to_currency(car.price) %></td>
       </tr>
     </table>
   </article>
