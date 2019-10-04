@@ -1,6 +1,6 @@
 
 
-<h1> Welcome to MGGM cars! </h1>
+<h3> Contact us for special veteran discounts! </h3>
 <h2> <%= pluralize(@cars.size, 'Car') %> <%= 'is'.pluralize(@cars.size) %> in this list:</h2>
 
 <ul>
@@ -21,16 +21,12 @@
         <td><%= car.mileage %></td>
       </tr>
       
-      <%=begin%>
- <tr>
+      <tr>
         <th>Vehicle type: </th>
         <td><%= car.vehicle_type %></td> 
       </tr> 
-<%
-=end%>
 
-     <%=begin%>
- <tr>
+      <tr>
         <th>Price: </th>
         <td><%= number_to_currency(car.price) %></td>
       </tr>
