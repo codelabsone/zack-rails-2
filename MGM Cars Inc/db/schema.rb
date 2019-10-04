@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20191003214956) do
     t.integer "mileage"
     t.integer "price"
     t.text "vehicle_type"
-    t.text ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"

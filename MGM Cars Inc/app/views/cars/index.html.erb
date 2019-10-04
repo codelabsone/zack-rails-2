@@ -15,15 +15,22 @@
         <th> Color:</th>
         <td> <%= car.color %><br></td>
       </tr>
+
       <tr>
         <th>Mileage: </th>
         <td><%= car.mileage %></td>
-        </tr>
-      <tr>
-        <th>Vehicle type: </th>
-        <td><%= car.vehicle_type %></td>
       </tr>
-      <tr>
+      
+      <%=begin%>
+ <tr>
+        <th>Vehicle type: </th>
+        <td><%= car.vehicle_type %></td> 
+      </tr> 
+<%
+=end%>
+
+     <%=begin%>
+ <tr>
         <th>Price: </th>
         <td><%= number_to_currency(car.price) %></td>
       </tr>
