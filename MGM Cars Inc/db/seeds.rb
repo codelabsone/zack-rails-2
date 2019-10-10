@@ -4192,7 +4192,7 @@
                 model: c[2], 
                 color: c[3]=['Red', 'Blue', 'Yellow', 'White', 'Black', 'Gray'].sample,
                 mileage: c[4]=rand(0...500000),
-                vehicle_type: c[5]=['SUV', 'Sedan', 'Coupe', 'Convertible', 'Truck', 'Van'].sample,
+                vehicle_type: c[5]=(Car::TYPES).sample,
                 price: c[6]=rand(2500...65000),
                 description: c[7]="This vehicle does not yet have a description.")
 end
