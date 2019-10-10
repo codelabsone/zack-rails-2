@@ -1,6 +1,6 @@
 <%= form_for(@car) do |f| %>
   <p>
-    <%= f.make :make %><br/>
+    <%= f.label :make %><br/>
     <%= f.text_field :make, autofocus: true %>
   </p>
   <p>
@@ -29,7 +29,7 @@
 </p>
 <p>
   <%= f.label :vehicle_type %><br/>
-  <%= f.text_field :vehicle_type %>
+  <%= f.select :vehicle_type, Car::TYPES, prompt: "Choose one" %>
 </p>
 
 <p>
